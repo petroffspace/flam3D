@@ -1,6 +1,6 @@
 # flam3D
 
-![flam3D: 2D flam3 renders and Apophysis 7X 3D renders](flam3/flam3D-title.png)
+![flam3D: two 2D flam3 flames and two Apophysis 7X 3D flames](flam3/flam3D-title.png)
 
 flam3D is [flam3](https://github.com/scottdraves/flam3) with the Apophysis 7X
 "3D hack" added, so it renders the 3D flames of Apophysis 7X as well as
@@ -26,12 +26,36 @@ attribute (Apophysis 2.x, 7X.14 and earlier, 7X 15B and earlier) and the
 newer one for everything else; `apo_pre15c="1"` or `"0"` on the `<flame>`
 element overrides it, and flam3-genome writes it out so the setting survives.
 
+## Credits
+
+- **flam3** was created by Scott Draves, with Erik Reckase and other
+  contributors (Copyright (C) 1992-2009 Spotworks LLC):
+  [flam3.com](https://flam3.com),
+  [github.com/scottdraves/flam3](https://github.com/scottdraves/flam3).
+- **Apophysis** was created by Mark Townsend (2001-2004) and continued by
+  Ronald Hordijk, Piotr Borys and Peter Sdobnov. Peter Sdobnov wrote the
+  "3D hack" (2007-2008), and Georg Kiehne made **Apophysis 7X** (2009-2011):
+  [github.com/xyrus02/apophysis-7x](https://github.com/xyrus02/apophysis-7x).
+- The 3D plugin variations come from the Apophysis plugin pack; circlize and
+  Spherical3D follow their JWildfire versions.
+- flam3D: © petroffspace.com
+
+## License
+
+flam3 and Apophysis are licensed under the GNU GPL version 3 or later, so the
+patched flam3 source (`flam3/`) and `flam3-3d-hack.patch` are under the GPL
+too; see `flam3/COPYING`. The headers in `deps/` keep the licenses of libxml2
+and libjpeg. The rest of this repository (the build, patch and release
+scripts, the READMEs and the title image) is under the MIT license; see
+`LICENSE`.
+
 ## Contents
 
 | Path | What it is |
 |---|---|
 | `flam3/` | flam3 source with the patch applied, plus the built binaries |
 | `flam3-3d-hack.patch` | the same changes as a patch against upstream flam3 |
+| `LICENSE` | MIT license for the files outside `flam3/` (see "License") |
 | `build.sh` | builds `flam3/` on this machine using the headers in `deps/` |
 | `deps/` | libxml2 and libjpeg development headers (no root needed to build) |
 | `make-patch.sh` | regenerates `flam3-3d-hack.patch` from `flam3/` (clones upstream) |

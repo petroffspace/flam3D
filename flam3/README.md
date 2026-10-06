@@ -1,6 +1,6 @@
 # flam3D
 
-![flam3D: 2D flam3 renders and Apophysis 7X 3D renders](flam3D-title.png)
+![flam3D: two 2D flam3 flames and two Apophysis 7X 3D flames](flam3D-title.png)
 
 flam3D is [flam3](https://github.com/scottdraves/flam3) with the Apophysis 7X
 "3D hack" added, so it renders the 3D flames of Apophysis 7X as well as
@@ -25,6 +25,27 @@ versions keep z only in the explicitly 3D variations and call the 3D linear
 attribute (Apophysis 2.x, 7X.14 and earlier, 7X 15B and earlier) and the
 newer one for everything else; `apo_pre15c="1"` or `"0"` on the `<flame>`
 element overrides it, and flam3-genome writes it out so the setting survives.
+
+## Credits
+
+- **flam3** was created by Scott Draves, with Erik Reckase and other
+  contributors (Copyright (C) 1992-2009 Spotworks LLC):
+  [flam3.com](https://flam3.com),
+  [github.com/scottdraves/flam3](https://github.com/scottdraves/flam3).
+- **Apophysis** was created by Mark Townsend (2001-2004) and continued by
+  Ronald Hordijk, Piotr Borys and Peter Sdobnov. Peter Sdobnov wrote the
+  "3D hack" (2007-2008), and Georg Kiehne made **Apophysis 7X** (2009-2011):
+  [github.com/xyrus02/apophysis-7x](https://github.com/xyrus02/apophysis-7x).
+- The 3D plugin variations come from the Apophysis plugin pack; circlize and
+  Spherical3D follow their JWildfire versions.
+- flam3D: © petroffspace.com
+
+## License
+
+flam3 and Apophysis are licensed under the GNU GPL version 3 or later, so the
+patched flam3 source in this archive is under the GPL too; see `COPYING`. This
+README and its title image are under the MIT license, as in the `LICENSE` file
+of the [flam3D repository](https://github.com/petroffspace/flam3D).
 
 ## Building on Linux
 
