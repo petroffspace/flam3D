@@ -61,7 +61,7 @@ scripts, the READMEs and the title image) is under the MIT license; see
 | `make-patch.sh` | regenerates `flam3-3d-hack.patch` from `flam3/` (clones upstream) |
 | `make-release.sh` | makes the release archive in `releases/` |
 | `release/` | release file list, upstream's `libtool` and the upstream commit |
-| `releases/` | `flam3D-<version>.tar.gz`, the patch and their SHA-256 sums |
+| `releases/` | `flam3D-<version>.tar.gz`, `flam3D-<version>.patch` and their SHA-256 sums |
 
 ## Building on this machine
 
@@ -97,8 +97,9 @@ archive:
 A file added to the source must also be listed in `release/MANIFEST`.
 
 This writes `releases/flam3D-1.0.tar.gz` (the patched source without build
-files, binaries or experiments; it unpacks to `flam3D-1.0/`), a copy of
-`flam3-3d-hack.patch` and `releases/flam3D-1.0.sha256`.
+files, binaries or experiments; it unpacks to `flam3D-1.0/`),
+`releases/flam3D-1.0.patch` (a copy of `flam3-3d-hack.patch`) and
+`releases/flam3D-1.0.sha256`.
 
 ## Building elsewhere (Linux, Raspberry Pi 5, 400, 2B)
 

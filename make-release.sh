@@ -1,7 +1,8 @@
 #!/bin/sh
 # Make the flam3D release: releases/flam3D-<version>.tar.gz with the patched
 # source from ./flam3 (no build files, binaries or local experiments), plus
-# a copy of the patch and SHA-256 checksums.
+# a copy of the patch named releases/flam3D-<version>.patch and SHA-256
+# checksums.
 #
 #   ./make-release.sh [version]      (default 1.0)
 #
@@ -30,7 +31,7 @@ chmod 755 "$STAGE/$NAME/libtool"
 tar --sort=name --owner=0 --group=0 --numeric-owner \
     --mtime="$(date -u +%Y-%m-%d) 00:00:00Z" \
     -czf "$OUT/$NAME.tar.gz" -C "$STAGE" "$NAME"
-cp "$TOP/flam3-3d-hack.patch" "$OUT/flam3-3d-hack.patch"
-(cd "$OUT" && sha256sum "$NAME.tar.gz" flam3-3d-hack.patch > "$NAME.sha256")
+cp "$TOP/flam3-3d-hack.patch" "$OUT/$NAME.patch"
+(cd "$OUT" && sha256sum "$NAME.tar.gz" "$NAME.patch" > "$NAME.sha256")
 
 echo "made $OUT/$NAME.tar.gz"
