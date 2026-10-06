@@ -3,7 +3,8 @@ MIT License
 Copyright (c) 2026 petroffspace.com
 
 This license covers the files of flam3D outside the flam3/ directory (except
-flam3-3d-hack.patch and deps/), plus flam3/README.md and flam3/flam3D-title.png.
+flam3-3d-hack.patch, deps/ and release/libtool.upstream, which is upstream
+flam3's libtool script), plus flam3/README.md and flam3/flam3D-title.png.
 The patched flam3 source in flam3/ and flam3-3d-hack.patch are licensed under
 the GNU General Public License version 3 or later; see flam3/COPYING.
 

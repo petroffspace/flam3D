@@ -60,7 +60,7 @@ scripts, the READMEs and the title image) is under the MIT license; see
 | `deps/` | libxml2 and libjpeg development headers (no root needed to build) |
 | `make-patch.sh` | regenerates `flam3-3d-hack.patch` from `flam3/` (clones upstream) |
 | `make-release.sh` | makes the release archive in `releases/` |
-| `release/` | release file list, upstream's `libtool` and the upstream commit |
+| `release/` | release file list, upstream's `libtool`, the upstream commit and the title card's flames and script |
 | `releases/` | `flam3D-<version>.tar.gz`, `flam3D-<version>.patch` and their SHA-256 sums |
 
 ## Building on this machine
@@ -100,6 +100,11 @@ This writes `releases/flam3D-1.0.tar.gz` (the patched source without build
 files, binaries or experiments; it unpacks to `flam3D-1.0/`),
 `releases/flam3D-1.0.patch` (a copy of `flam3-3d-hack.patch`) and
 `releases/flam3D-1.0.sha256`.
+
+To remake the title image `flam3/flam3D-title.png` after changing its flames
+in `release/title-card.flam3`, build first and then run
+`release/make-title-card.sh` (needs ImageMagick and the DejaVu fonts; the
+render takes a few minutes).
 
 ## Building elsewhere (Linux, Raspberry Pi 5, 400, 2B)
 
